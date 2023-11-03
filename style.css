@@ -75,7 +75,7 @@ section {
   --reviews-height: 763px;
   --images-height: 439px;
   --footer-height: 343px;
-  --header-padding: 25px 45px;
+  --header-padding: 20px 45px;
   --header-links-gap: 50px;
   --headline-padding: 205px 0 80px 0;
   --transition-timing: 0.3s;
@@ -345,15 +345,11 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   overflow: hidden;
+  margin-bottom: var(--footer-height);
 }
 .images img {
   width: 100%;
   height: 100%;
-}
-
-.pre--footer {
-  height: var(--footer-height);
-  z-index: -10;
 }
 
 .footer {
