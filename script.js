@@ -32,8 +32,21 @@ window.onload = function () {
 
 // const navigationHeight = document.querySelector("header").offsetHeight;
 
-// // console.log((navigationHeight)/2);
+// console.log((navigationHeight)/2);
 // document.documentElement.style.setProperty(
 //   "--scroll-padding",
 //   navigationHeight / 2 + "px"
 // );
+
+
+// const menuIcon = document.getElementsByClassName('.header__menu');
+const headerLinks = document.getElementById('headerLinks');
+function changeStyle() {
+
+    if(headerLinks.style.display === 'none') {
+      headerLinks.style.display = 'flex';
+    } else {
+      headerLinks.style.display = 'none'
+    }
+
+}

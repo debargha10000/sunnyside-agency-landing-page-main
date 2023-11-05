@@ -12,14 +12,25 @@
 <body>
   <header class="header">
     <img class="header__logo" src="images/logo.svg" alt="logo">
-    <img class="header__menu" src="images/icon-hamburger.svg" alt="">
     <nav class="header__links">
       <li><a href="#">About</a></li>
       <li><a href="#">Services</a></li>
       <li><a href="#">Projects</a></li>
       <li><button>Contact</button></li>
     </nav>
+    
+    <button class="header__menu" onclick="changeStyle()" ><img  src="images/icon-hamburger.svg" alt=""></button>
+    <!-- <img class="close" src="images/icons8-close.svg" alt=""> -->
   </header>
+  <div class="header__links--container" id="headerLinks">
+    <nav class="header__links--col">
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><button>Contact</button></li>
+    </nav>
+  </div>
+
 
   <section class="headline">
     <h1>
@@ -140,7 +151,29 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>. -->
   </div>
-  <script src="script.js"></script>
+  <!-- <script src="script.js"></script> -->
+  <script>
+    window.onload = function () {
+  window.addEventListener("scroll", function (e) {
+    if (window.scrollY > 300) {
+      this.document.querySelector("header").classList.add("is-scrolling");
+    } else {
+      this.document.querySelector("header").classList.remove("is-scrolling");
+    }
+  });
+}
+const headerLinks = document.getElementById('headerLinks');
+function changeStyle() {
+
+    if(headerLinks.style.display === 'none') {
+      headerLinks.style.display = 'flex';
+    } else {
+      headerLinks.style.display = 'none'
+    }
+
+}
+  </script>
+  
 </body>
 
 </html>
